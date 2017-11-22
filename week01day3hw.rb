@@ -75,24 +75,25 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
     }
   }
 
-# 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-p users["Jonathan"][:twitter]
-# 2. Get Erik's hometown
-p users["Erik"][:home_town]
-# 3. Get the array of Erik's favourite numbers
-p users["Erik"][:favourite_numbers]
-# 4. Get the type of Avril's pet Colin
-p users["Avril"][:pets]["colin"]
-# 5. Get the smallest of Erik's favourite numbers
-p users["Erik"][:favourite_numbers].min
-# 6. Add the number `7` to Erik's favourite numbers
-p users["Erik"][:favourite_numbers].push(7)
-# 7. Change Erik's hometown to Edinburgh
-p users["Erik"][:home_town] = "Edinburgh"
-# 8. Add a pet dog to Erik called "Fluffy"
-p users["Erik"][:pets][:dog] = "Fluffy"
-# 9. Add yourself to the users hash
-p users["David"][:pets]["dora"]
+# # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+# p users["Jonathan"][:twitter]
+# # 2. Get Erik's hometown
+# p users["Erik"][:home_town]
+# # 3. Get the array of Erik's favourite numbers
+# p users["Erik"][:favourite_numbers]
+# # 4. Get the type of Avril's pet Colin
+# p users["Avril"][:pets]["colin"]
+# # 5. Get the smallest of Erik's favourite numbers
+# p users["Erik"][:favourite_numbers].min
+# # 6. Add the number `7` to Erik's favourite numbers
+# p users["Erik"][:favourite_numbers].push(7)
+# # 7. Change Erik's hometown to Edinburgh
+# p users["Erik"][:home_town] = "Edinburgh"
+# # 8. Add a pet dog to Erik called "Fluffy"
+# p users["Erik"][:pets][:dog] = "Fluffy"
+# # 9. Add yourself to the users hash
+# p users["David"][:pets]["dora"]
+
 # C. Given the following data structure:
 
 
@@ -109,11 +110,24 @@ united_kingdom = [
     name: "England",
     population: 53010000,
     capital: "London"
-  }
+  },
+    name: "Northern Ireland",
+    population: 1811000,
+    capital: "Belfast"
 ]
 
 
 # 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
+p united_kingdom[1][:capital] = "Cardiff"
 # 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
+p united_kingdom[3]
 # 3. Use a loop to print the names of all the countries in the UK.
+for countries in united_kingdom
+  p countries[:name]
+end
 # 4. Use a loop to find the total population of the UK.
+total_population = 0
+for countries in united_kingdom
+  total_population += countries[:population]
+end
+p total_population
