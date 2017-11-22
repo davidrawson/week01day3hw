@@ -21,8 +21,16 @@ stops.delete_at(2)
 # 7. How many stops there are in the array?
 stops.count()
 # 8. How many ways can we return `"Falkirk High"` from the array?
+stops[2]
+stops[-5]
+stops.fetch(2)
+stops.fetch(-5)
 # 9. Reverse the positions of the stops in the array
+stops.reverse!()
 # 10. Print out all the stops using a for loop
+for stop in stops
+  p stop
+end
 
 ## B. Given the following data structure:
 
